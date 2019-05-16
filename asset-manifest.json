@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-Food-Storm/static/css/main.4ed9da7f.chunk.css",
-    "main.js": "/React-Food-Storm/static/js/main.5f98587d.chunk.js",
-    "main.js.map": "/React-Food-Storm/static/js/main.5f98587d.chunk.js.map",
+    "main.css": "/React-Food-Storm/static/css/main.8937ed5a.chunk.css",
+    "main.js": "/React-Food-Storm/static/js/main.7c600882.chunk.js",
+    "main.js.map": "/React-Food-Storm/static/js/main.7c600882.chunk.js.map",
     "runtime~main.js": "/React-Food-Storm/static/js/runtime~main.7ddbab1d.js",
     "runtime~main.js.map": "/React-Food-Storm/static/js/runtime~main.7ddbab1d.js.map",
     "static/js/2.4ce393e1.chunk.js": "/React-Food-Storm/static/js/2.4ce393e1.chunk.js",
     "static/js/2.4ce393e1.chunk.js.map": "/React-Food-Storm/static/js/2.4ce393e1.chunk.js.map",
     "index.html": "/React-Food-Storm/index.html",
-    "precache-manifest.0cd419bba5b6c43b2fd38dff43eea20f.js": "/React-Food-Storm/precache-manifest.0cd419bba5b6c43b2fd38dff43eea20f.js",
+    "precache-manifest.da861d5eb3ef253e8a0f67c2572f76b8.js": "/React-Food-Storm/precache-manifest.da861d5eb3ef253e8a0f67c2572f76b8.js",
     "service-worker.js": "/React-Food-Storm/service-worker.js",
-    "static/css/main.4ed9da7f.chunk.css.map": "/React-Food-Storm/static/css/main.4ed9da7f.chunk.css.map"
+    "static/css/main.8937ed5a.chunk.css.map": "/React-Food-Storm/static/css/main.8937ed5a.chunk.css.map"
   }
 }

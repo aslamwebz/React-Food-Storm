@@ -23,7 +23,7 @@ View Our live demo from here :  <a href="https://aslamwebz.github.io/React-Food-
 
 ## Features
 
-- HomeScreen with Filterable Foods: brakfast, lunch, dinner, appetizers
+- HomeScreen with Filterable Foods types: breakfast, lunch, dinner, appetizers
 - User can add to cart and define a number of food products and remove them
 
 ## Built With

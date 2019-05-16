@@ -17,7 +17,7 @@ function App() {
       <Router history={history}>
       <Navbar />
         <Switch>
-            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/React-Food-Storm" component={Dashboard} />
             <Route path="/cart" component={Cart} />
         </Switch>
       </Router>

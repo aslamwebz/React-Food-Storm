@@ -10,8 +10,10 @@ const Cart = (props) => {
 
 const [cartItems, setCartItems] = useState([])
 const [checkout, setcheckout] = useState(false)
+const [total, setTotal] = useState(0)
 
 useEffect(() => {
+    setTotal(grandTotalCounter())
     cartCheck()
 }, [props])
 
@@ -36,9 +38,9 @@ const cartCheck = () => {
             <td>{item.name}</td>
             {/* <td>{item.details}</td> */}
             <td>{item.type}</td>
-            <td>$ {item.price}</td>
+            <td>$<input name="totals[]" type="number" value={item.price} readOnly id="totalInput" /></td>
             <td>
-               <QuantityCounter />
+               <QuantityCounter priceChange={priceChange} val={item.price}/>
                 {/* <button className="btn btn-danger" onClick={() => removeItem(item, props.cart)}>Remove Item</button> */}
             </td>
             <td>
@@ -49,7 +51,44 @@ const cartCheck = () => {
     ))
 
     setCartItems(Items)
+
 }
+
+const grandTotalCounter = () => {
+  
+    let prices = props.cart.map(item => item.price)
+
+    function sum(nums) {
+        return nums.reduce((a, b) => a + b)
+    }
+    
+    const grandTotal = (prices.length !== 0 ? sum(prices): 0)
+
+    localStorage.setItem('grandTotal', grandTotal)
+
+    return grandTotal
+
+    }
+
+const priceChange = (amount, action) => {
+
+    let temp = 0
+    let t = JSON.parse(localStorage.getItem('grandTotal'))
+
+
+    if(action === 'plus'){
+        temp = t + amount
+    }
+
+    if(action === 'minus'){
+        temp = t - amount
+    }
+
+    localStorage.setItem('grandTotal', temp)
+    setTotal(temp)
+}
+
+
 
 const fireCheckout = () => {
     props.openCart(false)
@@ -97,11 +136,23 @@ const content = (
                                 </tr>
                             </thead>
                             <tbody>
-                           
                             {cartItems} 
+
+                            </tbody>
+
+                        </table>
+                        <table className="table table-condensed table-striped table-bordered">
+
+                        <tbody>
+                                <tr>
+                                    <td>Total :</td>
+                                    <td>{parseFloat(total).toFixed(2)}</td>
+                                </tr>
                             </tbody>
                         </table>
                         {checkout ? '':'Your cart is empty, please add some items'}
+
+                        {/* {checkout ? <button className="btn btn-success" onClick={() => getTotal()}>getTotal</button>:''} */}
 
                         {checkout ? <button className="btn btn-success" onClick={() => fireCheckout()}>Checkout and Order</button>:''}
                     </div>   

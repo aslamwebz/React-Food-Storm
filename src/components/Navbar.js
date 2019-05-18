@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+// import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { openCart } from '../actions/cartActions'
 import Cart from './Cart'
+import GithubCorner from 'react-github-corner';
 
 const Navbar = (props) => {
 
@@ -12,7 +13,8 @@ const Navbar = (props) => {
 
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container">
+         <div className="container">
+         <GithubCorner href="https://github.com/aslamwebz?tab=repositories" direction="left" size="160"/>
           <a className="navbar-brand" href="/">Food Storm</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -23,7 +25,7 @@ const Navbar = (props) => {
                     <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                 </li> */}
                 <li className="nav-item">
-                    <button className="nav-link active btn btn-danger" onClick={clickHandle}> <i class="fas fa-shopping-cart"></i>&nbsp;View Cart</button>
+                    <button className="nav-link active btn btn-danger" onClick={clickHandle}> <i className="fas fa-shopping-cart"></i>&nbsp;View Cart</button>
                 </li>
                 {/* <li className="nav-item">
                     <a className="nav-link" href="#">Pricing</a>

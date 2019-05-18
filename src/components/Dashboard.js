@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { getItems, filterItems } from '../actions/menuActions'
 import Card from '../components/Card'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { addToCart,removeFromCart } from '../actions/cartActions'
+import { addToCart} from '../actions/cartActions'
 
 const Dashboard = props => {
-
+ 
     useEffect(() => {
         props.getItems()
     }, [props.items.items])

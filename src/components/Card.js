@@ -17,15 +17,16 @@ const Card = (props) => {
                 <div className="card__category"><a href="#">{props.item.type}
                 </a></div>
                 
-                <h2 className="card__title"><a href="#">{props.item.name}</a></h2>
+                <h4 className="card__title"><a href="#">{props.item.name}</a></h4>
                 {/* <div className="card__subtitle">an ice cream sundae party！</div> */}
                 <p className="card__description">{props.item.details}</p>
             </div>
+            <br/>
             <footer className="card__footer">
                 <button className="btn btn-info btn-sm" onClick={props.add}>Add To Cart</button>
 
                 {/* <span className="icon ion-clock"></span> 10 mins ago */}
-                <span className="icon ion-chatbox"></span><a href="#"> 145 comments</a>
+                {/* <span className="icon ion-chatbox"></span><a href="#"> 145 comments</a> */}
             </footer>
         </article>
     </React.Fragment>

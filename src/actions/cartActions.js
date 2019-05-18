@@ -6,7 +6,6 @@ export const addToCart = (item,cart) => dispatch => {
     } else {
         cart.push(item)
     }
-    // console.log('add action', cart)
     dispatch({
         type:ADD_TO_CART,
         payload:cart
@@ -38,3 +37,28 @@ export const emptyCart = (cart) => dispatch => {
         payload:cart
     })
 }
+
+// const cart = localStorage.getItem('cart')
+
+// localStorage.setItem('cart', JSON.stringify(cart))
+
+// addCart(){
+//     let alreadyInCart = false;
+//     let cart = JSON.parse(localStorage.getItem('cart'))
+//     let product = this.props.products;
+
+//     cart.map(item => {
+//       if(item.id === product.id){
+//         alreadyInCart = true;
+//         item.quantity += product.quantity
+//       }
+
+//       return item
+//     })
+
+//     if(alreadyInCart === false ){
+//       cart.push(this.props.products)
+//     }
+    
+//     localStorage.setItem('cart', JSON.stringify(cart))
+//   }

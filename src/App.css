@@ -72,6 +72,11 @@ td{
   vertical-align: baseline !important;
 }
 
+#totalInput{
+    border:none;
+    background: transparent;
+}
+
 
 /* ---------------------- Component FilterPane --------------------- */
 

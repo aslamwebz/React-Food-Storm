@@ -15,7 +15,7 @@ const Navbar = (props) => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
          <div className="container">
          <GithubCorner href="https://github.com/aslamwebz?tab=repositories" direction="left" size="160"/>
-          <a className="navbar-brand" href="/">Food Storm</a>
+          <a className="navbar-brand" href="/React-Food-Storm">Food Storm</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
